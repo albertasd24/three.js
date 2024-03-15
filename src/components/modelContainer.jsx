@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import Model from "../hooks/loadModel";
 import "../style/model.css";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ModelContainer = ({ nameModel }) => {
     const mountRef = useRef(null);
@@ -9,12 +10,13 @@ const ModelContainer = ({ nameModel }) => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 30);
     const renderer = new THREE.WebGLRenderer({ alpha: true, powerPreference: 'high-performance', precision: 'lowp', animation: true });
-    let currectRef;
+    let currectRef, orbitControls;
 
     useEffect(() => {
         currectRef = mountRef.current;
         createScene()
         initRenderer(currectRef)
+        initOrbit()
         console.log(renderer.domElement);
         animate()
         mountRef.current.appendChild(renderer.domElement)
@@ -39,6 +41,11 @@ const ModelContainer = ({ nameModel }) => {
         }
         scene.add(modelGroup);
     };
+
+    const initOrbit = () => {
+        orbitControls = new OrbitControls(camera, renderer.domElement)
+        orbitControls.enableDamping = true
+    }
 
     const initRenderer = (currentRef) => {
 
