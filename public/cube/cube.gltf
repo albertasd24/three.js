@@ -1,5 +1,6 @@
 {
 	"asset":{
+		"copyright":"o",
 		"generator":"Khronos glTF Blender I/O v3.6.28",
 		"version":"2.0"
 	},
@@ -19,17 +20,7 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Cube",
-			"scale":[
-				0.8936774134635925,
-				0.8936774134635925,
-				0.8936774134635925
-			],
-			"translation":[
-				0,
-				0.6692704558372498,
-				0
-			]
+			"name":"Cube"
 		}
 	],
 	"materials":[
@@ -38,9 +29,9 @@
 			"extensions":{
 				"KHR_materials_specular":{
 					"specularColorFactor":[
-						0.8402448473864992,
-						0.8402448473864992,
-						0.8402448473864992
+						0.6357987704412495,
+						0.6357987704412495,
+						0.6357987704412495
 					]
 				},
 				"KHR_materials_ior":{
@@ -50,12 +41,13 @@
 			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.030218370258808136,
-					0.37519142031669617,
+					0.09107834845781326,
+					0.20047155022621155,
 					0.8000000715255737,
 					1
 				],
-				"roughnessFactor":0.5
+				"metallicFactor":0.782608687877655,
+				"roughnessFactor":0.19565218687057495
 			}
 		}
 	],

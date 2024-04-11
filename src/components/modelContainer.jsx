@@ -20,6 +20,14 @@ const ModelContainer = ({ nameModel }) => {
         console.log(renderer.domElement);
         animate()
         mountRef.current.appendChild(renderer.domElement)
+
+        return () => {
+            currectRef.removeChild(renderer.domElement)
+            scene.clear();
+            camera.clear();
+            renderer.clear();
+
+        }
     }, []);
 
     const createScene = () => {

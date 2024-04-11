@@ -2,7 +2,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const Model = () => {
     const ModelFlowerVase = (scene) => {
         const gltfLoader = new GLTFLoader();
-        gltfLoader.load('../../public/flower_vase/scene.gltf', (model) => {
+        gltfLoader.load('/cube/cube.gltf', (model) => {
             console.log('Modelo cargado');
             console.log(model);
             scene.add(model.scene);
